@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>changgou_common_db</artifactId>
+
     <dependencies>
         <dependency>
             <groupId>com.changgou</groupId>
@@ -34,5 +35,6 @@
             <version>1.2.3</version>
         </dependency>
     </dependencies>
+
 
 </project>
