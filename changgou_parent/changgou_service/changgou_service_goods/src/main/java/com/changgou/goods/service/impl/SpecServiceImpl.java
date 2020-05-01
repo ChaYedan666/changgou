@@ -104,6 +104,18 @@ public class SpecServiceImpl implements SpecService {
         return (Page<Spec>)specMapper.selectByExample(example);
     }
 
+    @Override
+    public List<Map> findListByCategoryName(String categoryName) {
+        List<Map> specList = specMapper.findListByCategoryName(categoryName);
+        if (specList != null) {
+            for (Map specMap : specList) {
+                String[] options = String.valueOf(specMap.get("options")).split(",");
+                specMap.put("options", options);
+            }
+        }
+        return specList;
+    }
+
     /**
      * 构建查询对象
      * @param searchMap

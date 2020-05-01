@@ -64,6 +64,11 @@ public interface SpecService {
     Page<Spec> findPage(Map<String, Object> searchMap, int page, int size);
 
 
-
+    /**
+     * 根据分类名称查询规格集合数据
+     * @param categoryName
+     * @return
+     */
+    List<Map> findListByCategoryName(String categoryName);
 
 }

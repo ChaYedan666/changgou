@@ -104,4 +104,15 @@ public class SpecController {
     }
 
 
+    /**
+     * 根据分类名称查询规格集合
+     * @param categoryName
+     * @return
+     */
+    @GetMapping("/category/{categoryName}")
+    public List<Map> findListByCategoryName(@PathVariable("categoryName") String categoryName){
+        List<Map> specs = specService.findListByCategoryName(categoryName);
+        return specs;
+
+    }
 }
