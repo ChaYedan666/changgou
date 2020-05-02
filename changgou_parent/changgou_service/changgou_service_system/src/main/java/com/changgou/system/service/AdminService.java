@@ -1,6 +1,6 @@
 package com.changgou.system.service;
 
-import com.changgou.pojo.Admin;
+import com.changgou.system.pojo.Admin;
 import com.github.pagehelper.Page;
 
 import java.util.List;
@@ -63,7 +63,11 @@ public interface AdminService {
      */
     Page<Admin> findPage(Map<String, Object> searchMap, int page, int size);
 
-
-
+    /**
+     * 管理员登录验证密码
+     * @param admin
+     * @return
+     */
+    Boolean login(Admin admin);
 
 }
